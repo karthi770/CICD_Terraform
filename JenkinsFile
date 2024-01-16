@@ -4,12 +4,12 @@ pipeline{
         stage('Git checkout'){
             steps{
                 script{
-
-                    git branch: 'main', url: 'https://github.com/karthi770/CICD_Terraform.git'
-
+                    gitCheckout(
+                        branch:"main"
+                        url: "https://github.com/karthi770/CICD_Terraform.git"
+                    )
                 }
             }
         }
-
     }
 }
